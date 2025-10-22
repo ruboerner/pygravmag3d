@@ -305,30 +305,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="get_H">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pygravmag3d.get_h.get_H--parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pygravmag3d.get_h.get_H--returns" class="md-nav__link">
-    <span class="md-ellipsis">
-      Returns
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -346,30 +322,6 @@
       get_triangulation
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="get_triangulation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pygravmag3d.get_triangulation.get_triangulation--parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pygravmag3d.get_triangulation.get_triangulation--returns" class="md-nav__link">
-    <span class="md-ellipsis">
-      Returns
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -423,30 +375,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="get_H">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pygravmag3d.get_h.get_H--parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pygravmag3d.get_h.get_H--returns" class="md-nav__link">
-    <span class="md-ellipsis">
-      Returns
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -464,30 +392,6 @@
       get_triangulation
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="get_triangulation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pygravmag3d.get_triangulation.get_triangulation--parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pygravmag3d.get_triangulation.get_triangulation--returns" class="md-nav__link">
-    <span class="md-ellipsis">
-      Returns
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -553,23 +457,127 @@
 
         <p>Magnetic and gravity anomaly at the origin due to a polyhedral body
 of homogeneous magnetization and density.</p>
-<h4 id="pygravmag3d.get_h.get_H--parameters">Parameters</h4>
-<p>Face : (nf, 3) int array
-    Triangle indices (1-based in original MATLAB; provide 0-based here).
-cor : (nc, 3) float array
-    Vertex coordinates (meters).
-Un : (nf, 3) float array
-    Unit normals of the triangular faces (outward).
-M : (3,) float array
-    Magnetization vector (A/m).
-density : float
-    Mass density (kg/m^3).</p>
-<h4 id="pygravmag3d.get_h.get_H--returns">Returns</h4>
-<p>Bx, By, Bz, gx, gy, gz : floats
-    Magnetic flux density components Bx, By, Bz 
-    (same unit as the main field provided in the calling function) 
-    and gravitational acceleration
-    components gx, gy, gz (in m/s^2) at the origin.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>Face</code>
+            </td>
+            <td>
+                  <code>(nf, 3) int array</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Triangle indices (1-based in original MATLAB; provide 0-based here).</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>cor</code>
+            </td>
+            <td>
+                  <code>(nc, 3) float array</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Vertex coordinates (meters).</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>Un</code>
+            </td>
+            <td>
+                  <code>(nf, 3) float array</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Unit normals of the triangular faces (outward).</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>M</code>
+            </td>
+            <td>
+                  <code>(3,) float array</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Magnetization vector (A/m).</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td>
+                <code>density</code>
+            </td>
+            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Mass density (kg/m^3).</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                  <code>Bx, By, Bz, gx, gy, gz : floats</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Magnetic flux density components Bx, By, Bz 
+(same unit as the main field provided in the calling function) 
+and gravitational acceleration
+components gx, gy, gz (in m/s^2) at the origin.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
             <details class="quote">
@@ -792,18 +800,90 @@ density : float
     <div class="doc doc-contents ">
 
         <p>Compute the outward-oriented triangular surface mesh of the convex hull of <code>pts</code>.</p>
-<h4 id="pygravmag3d.get_triangulation.get_triangulation--parameters">Parameters</h4>
-<p>pts : ndarray of shape (n_points, 3)
-    Cartesian coordinates of the points defining the body.</p>
-<h4 id="pygravmag3d.get_triangulation.get_triangulation--returns">Returns</h4>
-<p>faces_oriented : ndarray of shape (n_faces, 3)
-    Indices of the hull vertices, oriented so their winding follows the outward normal.
-cor : ndarray of shape (n_points, 3)
-    Coordinates of the hull vertices ordered consistently with <code>faces_oriented</code>.
-Un : ndarray of shape (n_faces, 3)
-    Unit outward normal vector for each triangular face.
-v : float
-    Volume enclosed by the convex hull.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td>
+                <code>pts</code>
+            </td>
+            <td>
+                  <code>ndarray of shape (n_points, 3)</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Cartesian coordinates of the points defining the body.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>faces_oriented</code></td>            <td>
+                  <code>ndarray of shape (n_faces, 3)</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Indices of the hull vertices, oriented so their winding follows the outward normal.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+<td><code>cor</code></td>            <td>
+                  <code>ndarray of shape (n_points, 3)</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Coordinates of the hull vertices ordered consistently with <code>faces_oriented</code>.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+<td><code>Un</code></td>            <td>
+                  <code>ndarray of shape (n_faces, 3)</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Unit outward normal vector for each triangular face.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+<td><code>v</code></td>            <td>
+                  <code><span title="float">float</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Volume enclosed by the convex hull.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
             <details class="quote">
