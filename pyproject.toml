@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pygravmag3d"
+version = "0.1.0"
+description = "3D gravity & magnetics modelling"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["scipy"]
+
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pygravmag3d*"]
