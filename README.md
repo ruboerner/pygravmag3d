@@ -45,4 +45,6 @@ For a more complete, runnable demonstration (including triangulation, plotting a
 
 ## References
 
-This package is based on the MATLAB implementation of that can be accessed at [github.com/ruboerner/GravMag3D](https://github.com/ruboerner/GravMag3D).
+The method is based on published work by [Guptasarma & Singh (1999)](https://doi.org/10.1190/1.1444531) and [Singh and Guptasarma (2001)](https://doi.org/10.1190/1.1444942).
+
+This package reproduces the original algorithms from a previously developed MATLAB implementation, ported to Python, see [github.com/ruboerner/GravMag3D](https://github.com/ruboerner/GravMag3D).
