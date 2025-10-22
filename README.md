@@ -4,11 +4,19 @@
 
 ## Installation
 
-Clone the repository and install in editable mode:
+Clone the repository and install:
 
 ```bash
-pip install -e .
+pip install .
 ```
+
+If you make changes to the package source and want to reinstall the local copy, run:
+
+```bash
+pip install --upgrade .
+```
+
+
 
 ## Usage
 
