@@ -43,3 +43,6 @@ print("Gravity (m/s^2):    ", gx, gy, gz)
 
 For a more complete, runnable demonstration (including triangulation, plotting and comparisons with analytical solutions) see the Jupyter notebook `example_01.ipynb` included in this repository.
 
+## References
+
+This package is based on the MATLAB implementation of that can be accessed at [github.com/ruboerner/GravMag3D](https://github.com/ruboerner/GravMag3D).
