@@ -13,7 +13,7 @@ def get_H(Face, cor, Un, M, density):
     Parameters
     ----------
     Face : (nf, 3) int array
-        Triangle indices (1-based in MATLAB; provide 0-based here).
+        Triangle indices (1-based in original MATLAB; provide 0-based here).
     cor : (nc, 3) float array
         Vertex coordinates (meters).
     Un : (nf, 3) float array
@@ -26,7 +26,9 @@ def get_H(Face, cor, Un, M, density):
     Returns
     -------
     Bx, By, Bz, gx, gy, gz : floats
-        Magnetic flux density components Bx, By, Bz (in T) and gravitational acceleration
+        Magnetic flux density components Bx, By, Bz 
+        (same unit as the main field provided in the calling function) 
+        and gravitational acceleration
         components gx, gy, gz (in m/s^2) at the origin.
     """
     Face = np.asarray(Face, dtype=int)

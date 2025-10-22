@@ -555,7 +555,7 @@
 of homogeneous magnetization and density.</p>
 <h4 id="pygravmag3d.get_h.get_H--parameters">Parameters</h4>
 <p>Face : (nf, 3) int array
-    Triangle indices (1-based in MATLAB; provide 0-based here).
+    Triangle indices (1-based in original MATLAB; provide 0-based here).
 cor : (nc, 3) float array
     Vertex coordinates (meters).
 Un : (nf, 3) float array
@@ -566,7 +566,9 @@ density : float
     Mass density (kg/m^3).</p>
 <h4 id="pygravmag3d.get_h.get_H--returns">Returns</h4>
 <p>Bx, By, Bz, gx, gy, gz : floats
-    Magnetic flux density components Bx, By, Bz (in T) and gravitational acceleration
+    Magnetic flux density components Bx, By, Bz 
+    (same unit as the main field provided in the calling function) 
+    and gravitational acceleration
     components gx, gy, gz (in m/s^2) at the origin.</p>
 
 
@@ -652,7 +654,9 @@ density : float
 <span class="normal">85</span>
 <span class="normal">86</span>
 <span class="normal">87</span>
-<span class="normal">88</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_H</span><span class="p">(</span><span class="n">Face</span><span class="p">,</span> <span class="n">cor</span><span class="p">,</span> <span class="n">Un</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">density</span><span class="p">):</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">get_H</span><span class="p">(</span><span class="n">Face</span><span class="p">,</span> <span class="n">cor</span><span class="p">,</span> <span class="n">Un</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">density</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Magnetic and gravity anomaly at the origin due to a polyhedral body</span>
 <span class="sd">    of homogeneous magnetization and density.</span>
@@ -660,7 +664,7 @@ density : float
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    Face : (nf, 3) int array</span>
-<span class="sd">        Triangle indices (1-based in MATLAB; provide 0-based here).</span>
+<span class="sd">        Triangle indices (1-based in original MATLAB; provide 0-based here).</span>
 <span class="sd">    cor : (nc, 3) float array</span>
 <span class="sd">        Vertex coordinates (meters).</span>
 <span class="sd">    Un : (nf, 3) float array</span>
@@ -673,7 +677,9 @@ density : float
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
 <span class="sd">    Bx, By, Bz, gx, gy, gz : floats</span>
-<span class="sd">        Magnetic flux density components Bx, By, Bz (in T) and gravitational acceleration</span>
+<span class="sd">        Magnetic flux density components Bx, By, Bz </span>
+<span class="sd">        (same unit as the main field provided in the calling function) </span>
+<span class="sd">        and gravitational acceleration</span>
 <span class="sd">        components gx, gy, gz (in m/s^2) at the origin.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">Face</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">Face</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
