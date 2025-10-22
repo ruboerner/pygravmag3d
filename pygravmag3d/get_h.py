@@ -1,7 +1,7 @@
 
 import numpy as np
-from tri_angle import tri_angle
-from get_pqr import get_pqr
+from pygravmag3d.tri_angle import tri_angle
+from pygravmag3d.get_pqr import get_pqr
 
 G = 6.6732e-11  # gravitational constant used in original MATLAB code
 
