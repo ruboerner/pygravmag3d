@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.py
+pygravmag3d/__init__.py
+pygravmag3d/_version.py
+pygravmag3d/get_h.py
+pygravmag3d/get_pqr.py
+pygravmag3d/get_triangulation.py
+pygravmag3d/tri_angle.py
+pygravmag3d.egg-info/PKG-INFO
+pygravmag3d.egg-info/SOURCES.txt
+pygravmag3d.egg-info/dependency_links.txt
+pygravmag3d.egg-info/requires.txt
+pygravmag3d.egg-info/top_level.txt

@@ -1,0 +1,3 @@
+from pygravmag3d.get_h import get_H
+from pygravmag3d.get_triangulation import get_triangulation
+from pygravmag3d._version import __version__
